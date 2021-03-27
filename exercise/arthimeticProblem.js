@@ -4,6 +4,7 @@
 // 50,15 --> check whether these numbers are equal to 50  then print("i found a magical number")
 
 // 25, 25 --> check whether these numbers are equal to 50  then print("i found a magical number") =>
+
 //  check whether thier sum is equal to 50
 
 var numberone = 51;
@@ -22,3 +23,6 @@ if (result) {
 } else {
   console.log("not a magical number");
 }
+
+// you have to call a function named magicalNumber which should take 2 parameters
+//num1 and num2 and it should print whether its a magical number or not
