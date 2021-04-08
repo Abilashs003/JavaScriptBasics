@@ -115,12 +115,13 @@ console.log(bike3.getDetails());
 
 class persont {
   constructor(name, id) {
+    let addressa = "";
     this.name = name;
     this.id = id;
   }
 
   add_address(address) {
-    this.address = address;
+    this.addressa = address;
   }
   getDetails() {
     console.log(`${this.name} + ${this.add}`);
@@ -129,7 +130,64 @@ class persont {
 
 let personv = new persont("Vignesh", 21);
 personv.add_address("Delhi");
-console.log(personv.address);
+console.log(personv.addressa);
 
 //  Inheritance
-// es6 features
+
+// Car --> driving() , usingBreaks() ---> common functionality ---> parent class --> inherit features to the child
+// class
+
+// Maruthi Suzuki --> driving() , using Breaks()
+// benz --> driving() , using Breaks()
+
+class Car {
+  constructor(steering, carbreak, gear) {
+    this.steering = steering;
+    this.carbreak = carbreak;
+    this.gear = gear;
+  }
+  // function
+  driving() {
+    return `we are using ${this.steering}, ${this.carbreak}, ${this.gear}`;
+  }
+}
+
+class maruthi extends Car {
+  constructor(steering, carbreak, gear, music) {
+    super(steering, carbreak, gear);
+    this.music = music;
+  }
+
+  driving() {
+    return `${super.driving()},   ${this.music}`;
+  }
+}
+
+let car1 = new Car("normalSteering", "normalCarbreak", "normalgear");
+console.log(car1.driving());
+
+let maruthi1car = new maruthi("boschsteering", "mitshubi", "havells", "harman");
+console.log(maruthi1car.driving());
+
+// class person {
+//   // parent class
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   toString() {
+//     return `The name of the person is ${name}`;
+//   }
+// }
+
+// class student extends person {
+//   constructor(name, id) {
+//     super(name);
+//     this.id = id;
+//   }
+
+//   toString(){
+//     return
+//   }
+
+// }
